@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import UrlForm from './cmps/urlForm';
 import UrlPage from './cmps/urlPage';
 import './App.css';
 
@@ -11,7 +10,6 @@ class App extends Component {
           <h1 className="App-title">Galapro interview- Adi Gonnen</h1>
         </header>
         <UrlPage/>
-        {/* <UrlForm/> */}
       </div>
     );
   }

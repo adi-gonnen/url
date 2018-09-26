@@ -51,6 +51,17 @@
   width: 20px;
   height: 20px;
 }
+.msg-container {
+  display: flex;
+  margin: 40px auto;
+}
+.msg-container>h4 {
+  margin-right: 20px;
+}
+
+
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

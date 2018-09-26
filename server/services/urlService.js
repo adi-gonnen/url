@@ -10,23 +10,9 @@ function getDefaultUrl() {
 }
 
 
-function resolveAfter2Seconds() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('resolved');
-  
-      }, 2000);
-    });
-}
 function getUrl(url) {
-    if (url) {
-        return new Promise(resolve => {
-            setTimeout(() => {
-              resolve(url);
-            }, 2000);
-            // return {"url": url}
-        });
-    }
+    console.log('service back$$$$$', url); 
+    return Promise.resolve({url: url});
 }
 
 module.exports = {
@@ -36,7 +22,6 @@ module.exports = {
 
 function connectToMongo() {
     const MongoClient = require('mongodb').MongoClient;
-    // const url = 'mongodb://localhost:27017'; //15353
     const url = 'mongodb://adigon:galapro1@ds115353.mlab.com:15353/galapro';
     const dbName = 'galapro';
     return MongoClient.connect(url)

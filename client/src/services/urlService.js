@@ -13,9 +13,9 @@ function getDefaultUrl() {
 
 function getUrl(url) {
     console.log('service client');    
-    return axios.get(CURR_URL, url)
+    return axios.post(CURR_URL,{url: url})
         .then(res => {
-            return res
+            return res.data
         })
 }
 export default {

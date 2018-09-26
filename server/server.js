@@ -8,14 +8,13 @@ const cors = require('cors');
 app.use(cors());
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.send('url'))
+//app.get('/', (req, res) => res.send('url'))
 
-app.get('/url', (req, res) => {
-    console.log('url server'); 
-    urlService.getUrl(req.body)
-        .then(res => {
-            console.log('server after $$$$:', res)
-            res.json(res)
+app.post('/url', (req, res) => {
+    urlService.getUrl(req.body.url)
+        .then((getUrlResult) => {
+            console.log('server after $$$$:', getUrlResult.url)
+            res.end(getUrlResult.url);
         })
 })
 
