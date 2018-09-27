@@ -6,7 +6,8 @@ const app = express()
 const cors = require('cors');
 
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+// app​.​use​(​express​.​static​(​'dist'​)); 
 
 //app.get('/', (req, res) => res.send('url'))
 
@@ -26,4 +27,9 @@ app.get('/dUrl', (req, res) => {
             res.json(url)
         })
 })
+// const port = process.env.PORT || 3000;
+// http.listen(port, () => {
+//   console.log(`App listening on port ${port}!`)
+// });
+ 
 app.listen(3001, () => console.log('Example app listening on port 3001!'))
